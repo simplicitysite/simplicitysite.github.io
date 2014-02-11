@@ -1,11 +1,11 @@
 $(document).ready(function(){
-$("#ajax-contact-form").submit(function(){
+$("#contact-form").submit(function(){
 
 var str = $(this).serialize();
 
    $.ajax({
    type: "POST",
-   url: "contact_form/contact.php",
+   url: "http://doopnet.com/contact_form/contact.php",
    data: str,
    success: function(msg){
     
