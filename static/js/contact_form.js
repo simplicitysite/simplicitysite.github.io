@@ -1,5 +1,5 @@
 $(document).ready(function(){
-$("#contact-form").submit(function(){
+$("#contact_form").submit(function(){
 
 var str = $(this).serialize();
 
