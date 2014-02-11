@@ -35,6 +35,9 @@
     <script type="text/javascript">var switchTo5x=true;</script>
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher: "ur-84f92ba-a60c-cdc-a695-3c6bbfff9e66", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+    
+    <!-- the form script -->
+    <script type="text/javascript" src="/static/js/jquery.easing.1.3.js"></script>
 </head>
 	<body>
 		<div id="wrapper" class="container_12 clearfix">
@@ -88,7 +91,8 @@
 <form action="/contact/sendContact" method="post" name="contact_form" id="contact_form" >
         <h3>Contact Form</h3>
         <div class="hr dotted clearfix">&nbsp;</div>
-        <ul>
+        <div id="note"></div>
+        <ul id="fields">
             <li class="clearfix"><label for="name">Name</label> <input
                     type='text' name='name' id='name' />
                 <div class="clear"></div>
