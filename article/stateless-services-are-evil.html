@@ -1,0 +1,233 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Simplicity Itself | Helping our clients deliver valuable software through simplicity</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="Cloud Management" content="Open Cloud Brokers Ltd"/>
+    <meta name="google-site-verification" content="KAGWK1jDn6_guuMbA0kP29W7Q2aDHjNWRieDarKwLtY"/>
+    <newrelic:browserTimingHeader/>
+    
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/static/css/reset.css" />
+	<link rel="stylesheet" href="/static/css/styles.css" />
+	
+	<!-- Scripts -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://raw.github.com/fredhq/roundabout/master/jquery.roundabout.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="https://raw.github.com/fredhq/roundabout-shapes/master/jquery.roundabout-shapes.min.js"></script>
+
+    
+
+	<!--[if IE 6]>
+	<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script>
+	  /* EXAMPLE */
+	  DD_belatedPNG.fix('.button');
+	  
+	  /* string argument can be any CSS selector */
+	  /* .png_bg example is unnecessary */
+	  /* change it to what suits you! */
+	</script>
+	<![endif]-->
+
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-84f92ba-a60c-cdc-a695-3c6bbfff9e66", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</head>
+	<body>
+		<div id="wrapper" class="container_12 clearfix">
+
+		<!-- Text Logo -->
+		<h1 id="logo" class="grid_4"><a href="/">Simplicity<span class="logo-meta"> itself</span></a></h1>
+            
+        <ul id="navigation" class="grid_8">
+
+            
+            <li>
+                <a href="/contact/index" class=""><span
+                    class="meta">your thoughts</span>
+                    <br />Contact Us</a>
+            </li>
+            <li>
+                <a href="/projects/index" class="">
+                    <span class="meta">open source, first</span>
+                    <br />Projects</a>
+            </li>
+			<li>
+                <a href="/training/index" class="">
+                    <span class="meta">processes, tools</span>
+                    <br />Training</a>
+            </li>
+			<li>
+                <a href="/consultancy" class="">
+                    <span class="meta">make your software happen</span>
+                    <br />Consultancy</a>
+            </li>
+            <li>
+                <a href="/" class="">
+                    <span class="meta">back to base</span>
+                    <br />Home</a>
+            </li>
+        </ul>
+        
+
+        <div class="hr grid_12">&nbsp;</div>
+
+		
+
+    <div id="article">
+        
+<div class="author" style="float:right; padding-left:5%; text-align:left;">
+    <a href="/david_dawson">
+        <img class="sub" src="http://qconlondon.com/dl/photos/speakers/David_Dawson.png">
+        <div style="float:left">David Dawson<br/>28-03-2013</div>
+    </a>
+</div>
+
+
+<markdown:renderHtml>
+Simplicity in Web Architecture - Beware the Stateless Service
+=========================================================
+
+This article is related to my recent talk at the London Groovy/ Grails User Group which you can see at [SkillsMatter](http://skillsmatter.com/podcast/groovy-grails/all-hail-the-command-object-are-stateless-services-the-only-way)
+
+In that talk I presented a way to get back to an Object Oriented way of thinking within Grails, using the existing infrastructure to help us get away from the Stateless Service paradigm that we have so deeply embedded in our psyche.
+
+This is not only found in Grails, it is common in web frameworks of many kinds, especially those based on Spring or a similar IoC container.
+
+This is because they all rely heavily on the singleton scoped Service as the primary architectural component in the system.
+
+What's wrong with Stateless Services?
+----------------------------
+
+In many respects, nothing at all; they are a valid construct in many circumstances. For anyone reading this that isn't aware of what I'm talking about as 'Stateless Services', its the Grails artefact called the 'Service'  in its singleton form, which is the default.
+
+**/grails-app/services/ReportingService.groovy**
+
+    class ReportingService {
+
+        def generateReport(String name) {
+          ...
+        }
+    }
+
+The typical rule is that you *must not store data* in the Service instance as you then open yourself up to some pretty awesome (and not in a good way) threading problems.  For this reason, I try to refer to them as Stateless Services, to make that explicit.
+Read more on these, and the other service scopes, at the excellent [Grails Documentation](http://grails.org/doc/latest/guide/services.html)
+
+The problem as I see it is that it has no clearly defined responsibilities, or boundaries within which it is designed to operate.  The Grails documentation says that they are "the place to put the majority of the logic in your application".
+
+That's an accurate description of how they are used, however I prefer to look at things in a highly conceptual way before delving into implementation.
+
+So moving in that direction, when a request comes into the system, what artefact, conceptually, has the **responsibility** for that request?
+
+The answer, in many cases, is nothing.  Or rather, that responsibility is smeared around the application.  Some of it is handled by the controller (error handling is a common case where the responsibility is assumed in controllers), most of it is split across various service class methods.
+
+So?  Is this wrong?
+-------------------
+
+***Yes***
+
+This can have some significant effects on the system that sometimes, but not always immediately apparent. Those gotchas include:
+
+**HTTP Controllers do too much**
+
+They should only handle HTTP in and out and then delegate everything else to something else.  If you code a controller to both handle HTTP and then do 'something else' then it becomes far harder to test and the internal structure will become confused. It also begins to break the [Single Responsibility Principle](http://codebetter.com/karlseguin/2008/12/05/get-solid-single-responsibility-principle/)
+
+**Related state is not well encapsulated**
+
+Often a request comes into the system that contains multiple pieces of state that are intended to be processed together.  These will then be passed on to a service for processing.   Whether they are passed individually, or within some holding object, the effect is the same.  If the behaviour in the service interacts directly with the data items, then the data is not encapsulated.  It may as well be passed in separated.
+
+The result of this breaking of encapsulation is that an implicit coupling is introduced between your integration layer (HTTP/ persistence) and the core domain logic in unusual and unexpected ways, such as....
+
+**Persistence, messaging, HTTP and other integration concerns are blended within the applications core domain logic**
+
+This is an extremely common source of complexity in a system.  Your domain logic should do nothing apart from model your business problem.  Everything else is integration.
+
+**State and the behaviour that operates on it are split**
+
+This breaks encapsulation and spreads the behaviour across the system.
+It is not possible to look at any one piece of the system and understand the processes that will work upon it.
+
+**Services are created along technical, rather than business, lines**
+
+This seems a weird one so let me explain a little first.  If the Service is the primary way to separate business logic up, then the way that the services are modelling the system *should* map directly on to the business problem that it is implementing.
+
+Instead you often find services like EmailService, QueueService, RabbitService etc.  These examples are not part of the business domain (I use domain in the 'model your business sense', not the 'persistence class' sense).  They are purely technical items and as such are not part of your core domain logic.
+
+The fact that they exist at the same level as any business services results in confusion as it serves to blur the divide between the core domain and the surrounding integration; and so the seed is sewn for developers to think that integration code is somehow as important as the system domain.
+
+**It is not**
+
+
+Ok, so what can I do about this?
+--------------------------------
+
+Coming from a strong Object Oriented background, We're not content with the responsibility of the system domain being invaded by integration concerns, or with the responsibility for a request being smeared around the system.
+
+We recommend some general rules :-
+
+* Break your application's core logic up into domains and use the Life Preserver tool to decide where your classes go.
+
+* Label up the classes that are part of the core logic of your application; that's unique to your application's concern and that you want to evolve at the rate of the your application, not at the rate of anyone else's. This is the collection of domains that are at your application's core.
+
+* Every other domain likely exists in the 'outer ring' of the Life Preserver, and as such it exists to manage an integration with the world outside your application. Be it integration with messaging, persistence or even a front-end concern such as the web; it's all an integration and so the code there should be as limited to that integration concern as possible. This is firmly not the "code that makes you money", so aim for as little in these domains as possible.
+
+* Unit test your application's domain's core classes to distraction. They're your crown jewels, make sure they're diamonds.
+
+* Use the Life Preserver tool to decide what logic is inside your core domains and what is in the integration layers going forward.
+
+The talk above presents one method for doing this, which a subsequent article will elaborate on.
+
+
+</markdown:renderHtml>
+
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'simplicityitself'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div>
+
+
+        <div class="hr grid_12 clearfix">&nbsp;</div>
+        <!-- Footer -->
+        <p class="grid_12 footer clearfix">
+            <span class="float"><b>&copy; Copyright 2013</b> <a href="">Simplicity Itself Ltd</a></span> <a class="float right" href="#">top</a>
+        </p>
+		</div><!--end wrapper-->
+
+
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37728683-1']);
+        _gaq.push(['_setDomainName', 'simplicityitself.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+    
+    <newrelic:browserTimingFooter/>
+	</body>
+</html>
+
