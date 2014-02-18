@@ -15,8 +15,8 @@
 		
 		{% for post in site.posts %}
 		
-		<div class="events_item float alpha" style="width:200px;">
-            <div class="floater" style="">
+		<div class="events_item events_item_expander float alpha" style="width:200px;">
+            <div class="floater" style="float:none;">
             {% if post.external == false %}
             <a href="{{ post.url }}" style="display:block; width:100%; height:100%;">
             {% else %}
@@ -26,7 +26,7 @@
                 <img src="/static/documents/{{ post.author }}.jpg" style="float:right;" />
                 {% endif %}
             	
-            	<span style="display:block;{% if post.author %} margin-right:50px;{% endif %}; font-size:1.1em; font-weight:bold;">
+            	<span class="title" style="{% if post.author %}margin-right:50px;{% endif %};">
             	
                 {{ post.title }}
                 </span>

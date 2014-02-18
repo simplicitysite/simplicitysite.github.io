@@ -265,8 +265,8 @@
     #staff a img                        {width: 30px; clear:left}
 
 
-.events_item						{width:100%; position:relative; margin:0 14px 28px 14px; padding:0;}
-.events_item div					{width:100%; padding:5px; border: 1px solid #aaaaaa; -webkit-border-radius: 5px; -moz-border-radius: 5px; background:#f9f9f9; margin-bottom:0px;}
+.events_item						{width:100%; position:relative; margin:0 14px 28px 14px; padding:0; z-index:1;}
+.events_item div					{width:100%; padding:5px; border: 1px solid #aaaaaa; -webkit-border-radius: 5px; -moz-border-radius: 5px; background:#f9f9f9; margin-bottom:0px; z-index:1;}
 .events_item img                    {width:20%; float:right; padding:0; margin-bottom:0; box-shadow: 1px 1px 1px #cfcfcf;}
 .events_item img.sub                {width:7%; position: relative; left: 6.5em; top: 3em;}
 .events_item h3                     {position:absolute; text-shadow: 1px 1px 1px #cfcfcf; top:10px; left:2%; margin:0; padding:0; font-weight:900; font-size:1.8em; color:black; width:80%}
@@ -282,47 +282,91 @@
    font-size:0.8em;
     margin-top:3%
 }
+
+.events_item p.front {
+	width:180px;
+	font-size:0.6em;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	padding-top:5%;
+}
+
 .events_item .date                  {display:block; color:#666; float:left; padding:0; margin:0; padding-top:17%; font-size:2.5em; font-weight:bold}
 .events_item .date span             {font-size:0.6em}
 .events_item:hover div    {
     -webkit-box-shadow:0px 0px 20px #787878;
     -moz-box-shadow:0px 0px 20px #787878;
     background:#f9f9f9;
-	position:absolute;
+	
 }
 
-events_item div.floater {
- width:200px;
- height:65px;
- position:relative;
-}
 
-events_item:hover {
- z-index:10000;
- height:auto;
-}
-events_item:hover floater {
- width:auto;
- height:auto;
- overflow:none;
- z-index:10000;
-}
 .events_item span.description {
     padding:10px 15px;
     background:#f9f9f9;
     color:#000000;
-    z-index:999;
 }
+
 .events_item:hover span.description {
     display:inline-block;
 }
+
 .hover_effect span.description {
     display:inline-block;
 }
+
 .events_item:hover,.hover_effect div    {
     -webkit-box-shadow:0px 0px 20px #787878;
     -moz-box-shadow:0px 0px 20px #787878;
     background:#f9f9f9;
+}
+
+.events_item p.summary {
+ 	font-size: 1em;
+	font-weight:normal;
+}
+
+.events_item_expander {
+	z-index:100;
+}
+
+.events_item_expander .title {
+ display:block; 
+ font-size:1.1em; font-weight:bold;
+}
+
+.events_item_expander:hover .title {
+ display:block; 
+ font-size:2em; 
+ font-weight:bold;
+}
+.events_item_expander div.floater {
+ width:200px;
+ height:65px;
+ position:relative;
+ z-index:10;
+}
+
+.events_item_expander:hover {
+ z-index:600;
+ height:auto;
+}
+.events_item_expander:hover div.floater {
+ height:auto;
+ overflow:none;
+ z-index:600;
+}
+
+.events_item_expander:hover div {
+	width:600px;
+	z-index:601;
+	position:absolute;
+	height:auto;
+}
+
+.events_item_expander:hover .description {
+	float:left;
 }
 
 
