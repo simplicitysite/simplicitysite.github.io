@@ -15,28 +15,19 @@
 		
 		{% for post in site.posts %}
 		
-		<div class="events_item events_item_expander float alpha" style="width:200px;">
+		<div class="events_item events_item_expander float alpha" style="">
             <div class="floater" style="float:none;">
-            {% if post.external == false %}
-            <a href="{{ post.url }}" style="display:block; width:100%; height:100%;">
-            {% else %}
-            <a href="{{ post.linkto }}" style="display:block; width:100%; height:100%; height:100%;">
-            {% endif %}
-            	{% if post.author %}
-                <img src="/static/documents/{{ post.author }}.jpg" style="float:right;" />
-                {% endif %}
+				<a href="{{ post.url }}" style="display:block; width:100%; height:100%;">
             	
-            	<span class="title" style="{% if post.author %}margin-right:50px;{% endif %};">
+            	
+            	<span class="title" style="">
             	
                 {{ post.title }}
                 </span>
                 
                 
                 
-                <span class="description" style="font-size:1em; margin-bottom:10px;">{{ post.excerpt }}</span>
-                {% if post.external == true %}
-                <span style="display:block; position:absolute; bottom:5px;">{{ post.linktotext }}</span>
-                {% endif %}
+                <span class="date">{{ post.date }}</span>
                 </a>
                 
                 <p class="clear">&nbsp;</p>
