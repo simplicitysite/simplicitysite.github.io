@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="Cloud Management" content="Open Cloud Brokers Ltd"/>
     <meta name="google-site-verification" content="KAGWK1jDn6_guuMbA0kP29W7Q2aDHjNWRieDarKwLtY"/>
-    <newrelic:browserTimingHeader/>
+    
     
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="/static/css/reset.css" />
@@ -46,42 +46,7 @@
 	<body>
 	
 	{% include header.html %}
-	{% include topbar.html %}
 	
-	<div style="margin-left:20px; margin-right:20px;">
-		<a href="/simple-paas/" class="events_item float alpha" style="float:left; width:292px; z-index:1">
-            <div>
-                <span class="summary">
-                    <h3 style="width:100%; text-align: center">Simple PAAS</h3>
-                    <p class="front">&nbsp;</p>
-                </span>
-                <p class="clear">&nbsp;</p>
-            </div>
-        </a>
-	
-	
-		<a href="/consultancy/" class="events_item float alpha" style="float:left; width:292px; z-index:1">
-            <div>
-                <span class="summary">
-                    <h3 style="width:100%; text-align: center">Consult</h3>
-                    <p class="front">&nbsp;</p>
-                </span>
-                <p class="clear">&nbsp;</p>
-            </div>
-        </a>
-	
-	
-		<a href="/training/" class="events_item float alpha" style="float:left; width:292px; z-index:1">
-            <div>
-                <span class="summary">
-                    <h3 style="width:100%; text-align: center">Training</h3>
-                    <p class="front">&nbsp;</p>
-                </span>
-                <p class="clear">&nbsp;</p>
-            </div>
-        </a>
-        
-        <p class="clear">&nbsp;</p>
-	</div>
+	{{ page.content }}
 
 	{% include footer.html %}
