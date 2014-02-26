@@ -1,0 +1,31 @@
+
+	{% include header.html %}
+	<div style="margin: 0 20px;"><h4 class="page_title">{{ page.title }}</h4>
+	<div class="hr dotted clearfix">&nbsp;</div>
+	</div>
+	<div class="grid_8" style="margin-bottom: 1em; margin-right:-10px;">
+	
+	
+	<p style="margin: 1em 0; font-size:1.5em;">Speaker <span style="font-weight:bold;">{{ page.author }}</span></p>
+	<span style="font-size: 1.1em; display: block; margin-bottom:1em;">
+	{{ page.content }}
+	</span>
+	
+	<p><a href="{{ page.linkto }}" style="font-size:1.5em;">{{ page.linktotext }}</a></p>
+	</div>
+	
+	<div class="grid_4 event_list">
+	
+	<a href="{{ page.linkto }}" class="events_item float alpha">
+	<div>
+		<span class="summary">
+		<h3 style="width:100%; text-align:center;">{{ page.linktotext }}</h3>
+		<p>&nbsp;</p>
+		</span>
+		<p class="clear">&nbsp;</p>
+	</div>
+	</a>
+	</div>
+	
+
+	{% include footer.html %}
