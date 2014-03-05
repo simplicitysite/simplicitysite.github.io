@@ -5,6 +5,7 @@ external: false
 permalink: /article/all-hail-the-command-object
 author: David Dawson
 category: blog
+excerpt: This is a follow on to Simplicity in Web Architecture - Beware the Stateless Service. In that article, I gave my opinion on the Stateless Service programming model, and why I think it has been overused and touched on some of the issues it has caused.
 ---
 
  

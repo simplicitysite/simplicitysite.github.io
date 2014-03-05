@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Stateless Services Are Evil
-external: false
+title: Simplicity in Web Architecture - Beware the Stateless Service
 author: David Dawson
 category: blog
+permalink: /article/stateless-services-are-evil
+excerpt: This article is related to my recent talk at the London Groovy/ Grails User Group which you can see at SkillsMatter In that talk I presented a way to get back to an Object Oriented way of thinking within Grails, using the existing infrastructure to help us get away from the Stateless Service paradigm that we have so deeply embedded in our psyche.
 ---
 
 Simplicity in Web Architecture - Beware the Stateless Service
