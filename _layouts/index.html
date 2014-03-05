@@ -40,21 +40,30 @@
 	
 	<div class="hr grid_12 clearfix" style="z-index:-10;">&nbsp;</div>
 	
-	<div id="blog" style="position:relative; padding-right: 60px; margin:0 20px;">
+	<div id="blog" style="position:relative;">
 	
-		<div style="border:1px solid red">
+		<div style="margin: 0 20px; padding-left:20px;">
+		
+		
 		{% assign counter=0 %}
 		
 		{% for post in site.posts %}
 		
-		{% if post.category == 'blog' or post.category == '' and counter < 1 %}
+		{% if post.category == 'blog' and counter < 2 %}
 		{% assign counter=counter | plus:1 %}
 		
-		<p>{{ post.title }}</p>
+		<div style="margin-right:20px; width:400px; float:left; height: 200px;">
+		<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+		<p>{{ post.excerpt}}</p>
+		<p>With <span style="font-weight: bold;">{{ post.author }}</span> <a href="{{ post.url }}" style="font-style: italic; float:right;">Read More »</a></p>
+		
+		</div>
 		
 		{% endif %}
 		
 		{% endfor %}
+		
+		<span style="margin-right:20px; width:90px; float:left; height: 200px; display:block; font-size:4em;"><a href="/archive/">»</a></span>
 		</div>
 	
 	
