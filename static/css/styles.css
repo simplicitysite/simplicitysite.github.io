@@ -273,10 +273,14 @@
 .events_item span.description				{display:none; font-size:1.6em;}
 .events_item span.description	span	{display:block; margin-top:2%}
 .events_item span.summary			{
-    margin-top:14%;
+    margin-top:3.4em;
     display:block;
     font-size:1.8em;
     clear:both
+}
+
+.events_item:hover span.summary	{
+	color:#000;
 }
 .events_item span.summary ul {
    font-size:0.8em;

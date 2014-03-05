@@ -2,7 +2,8 @@
 layout: post
 title: Stateless Services Are Evil
 external: false
-author: david_dawson
+author: David Dawson
+category: blog
 ---
 
 Simplicity in Web Architecture - Beware the Stateless Service

@@ -3,7 +3,8 @@ layout: post
 title: Simplicity in Grails Design -  All Hail the Command Object
 external: false
 permalink: /article/all-hail-the-command-object
-author: david_dawson
+author: David Dawson
+category: blog
 ---
 
  

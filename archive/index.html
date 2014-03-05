@@ -1,0 +1,37 @@
+---
+layout: default
+title: Article Archives
+---
+
+
+<div class="grid_8">
+
+<h2>Blog and Events Archive</h2>
+<div class="hr clearfix" style="z-index:-10;">&nbsp;</div>
+
+{% for post in paginator.posts %}
+	
+		
+		
+		<span style="font-size:1.1em;">
+			<h4>{{ post.category }} <a href="{{ post.url }}" style="font-style: italic;">{{ post.title }}</a></h4>
+			<p>{{ post.excerpt }}</p>
+			<p style="font-size: 1.2em;">with <span style="font-weight: bold;">{{ post.author }}</span></p>
+    	</span>
+    	<div class="hr dotted clearfix">&nbsp;</div>
+
+{% endfor %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="/page{{paginator.previous_page}}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+  {% if paginator.next_page %}
+    <a href="/page{{paginator.next_page}}" class="next ">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
+</div>

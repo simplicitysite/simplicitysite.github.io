@@ -4,21 +4,21 @@
 	
 	<div style="margin-left:20px; margin-right:20px;">
 		<a href="/simple-paas/" class="events_item float alpha" style="float:left; width:292px; z-index:1">
-            <div>
+            <div style="height:200px;">
                 <span class="summary">
-                    <h3 style="width:100%; text-align: center">Simple PAAS</h3>
-                    <p class="front">&nbsp;</p>
+                    <h3 style="width:100%; text-align: center">Platform for Innovation</h3>
+                    <p class="front">Adopt innovation using Simple PaaS, a Micro Services based platform to support innovation and creation of an antifragile organisation.</p>
                 </span>
                 <p class="clear">&nbsp;</p>
             </div>
         </a>
 	
 	
-		<a href="/consultancy/" class="events_item float alpha" style="float:left; width:292px; z-index:1">
-            <div>
+		<a href="/consultancy/" class="events_item float alpha" style="float:left; width:292px; z-index:1;">
+            <div style="height:200px;">
                 <span class="summary">
-                    <h3 style="width:100%; text-align: center">Consult</h3>
-                    <p class="front">&nbsp;</p>
+                    <h3 style="width:100%; text-align: center">Building Software</h3>
+                    <p class="front">Architectural support, project delivery and technical expertise underpinned by delivery of business value.</p>
                 </span>
                 <p class="clear">&nbsp;</p>
             </div>
@@ -26,16 +26,38 @@
 	
 	
 		<a href="/training/" class="events_item float alpha" style="float:left; width:292px; z-index:1">
-            <div>
+            <div style="height:200px;">
                 <span class="summary">
                     <h3 style="width:100%; text-align: center">Training</h3>
-                    <p class="front">&nbsp;</p>
+                    <p class="front">Apply our technical and architectural expertise more widely via structured training</p>
                 </span>
                 <p class="clear">&nbsp;</p>
             </div>
         </a>
         
         <p class="clear">&nbsp;</p>
+	</div>
+	
+	<div class="hr grid_12 clearfix" style="z-index:-10;">&nbsp;</div>
+	
+	<div id="blog" style="position:relative; padding-right: 60px; margin:0 20px;">
+	
+		<div style="border:1px solid red">
+		{% assign counter=0 %}
+		
+		{% for post in site.posts %}
+		
+		{% if post.category == 'blog' or post.category == '' and counter < 1 %}
+		{% assign counter=counter | plus:1 %}
+		
+		<p>{{ post.title }}</p>
+		
+		{% endif %}
+		
+		{% endfor %}
+		</div>
+	
+	
 	</div>
 
 	{% include footer.html %}
