@@ -1,13 +1,15 @@
 
 		<div style="margin-left:20px;">
 		<div class="float" style="float:right; height: 63px; margin: 0 14px 20px 14px; margin-right: 40px;">
-		<span style="font-size: 2.2em; font-weight:bold; float:left; display:block; width:4em;">
-		Talks&nbsp;&amp; Events
-		</span>
-		
 		<a href="/archive/" style="display:block;height:100%; float:left; position:relative;" title="Archive">
 			<span style="font-size:4em;">»</span>
 		</a>
+		</div>
+		
+		<div style="float:left; height: 63px; margin-right: 20px; margin-left:20px;">
+		<span style="font-size: 2.2em; font-weight:bold; float:left; display:block; width:4em;">
+		Talks&nbsp;&amp; Events
+		</span>
 		</div>
 		{% assign counter=0 %}
 		{% capture year %}{{ site.time | date: '%Y' }}{% endcapture %}
@@ -26,6 +28,7 @@
 			
 			{% if pyear >= year and pmonth >= month %}
 				{% assign counter=counter | plus:1 %}
+		<div style="width:1px; border-right:1px solid #aaaaaa; float:left; height:60px;">&nbsp;</div>
 		<div class="float" style="height:60px; width:220px; float:left; margin: 0 14px 20px 14px; position:relative;">
             
 			<a href="{{ post.url }}" style="display:block; width:100%; height:100%;">
@@ -40,7 +43,7 @@
 
 		</div>
 
-		<div style="width:1px; border-right:1px solid #aaaaaa; float:left; height:60px;">&nbsp;</div>
+		
 			{% endif %}
 		{% endif %}
         
