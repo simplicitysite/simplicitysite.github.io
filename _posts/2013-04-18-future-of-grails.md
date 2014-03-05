@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Future of Grails
+title: The Future of Grails
 external: false
 permalink: /article/future-of-grails
 author: David Dawson
