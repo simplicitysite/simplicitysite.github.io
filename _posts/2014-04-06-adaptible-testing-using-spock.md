@@ -7,6 +7,7 @@ linktotext: Visit Agileadria for more information
 author: David Dawson
 layout: outgoing
 category: event
+
 ---
 By now, we all know the mantra of automated testing helping our production code stay production ready and be open to change. What happens when your tests themselves become part of the problem? When your tests slow down development and prevent you from delivering as fast as you think you could do?
 
