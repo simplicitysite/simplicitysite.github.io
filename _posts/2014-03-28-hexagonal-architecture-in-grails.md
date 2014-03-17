@@ -1,6 +1,7 @@
 ---
 layout: linkout
 title: Hexagonal Architecture in Grails
+location: Greach
 external: true
 linkto: http://greach.es/speakers/david-dawson-hexagonal-architecture-in-grails/
 linktotext: Visit Greach for more information
