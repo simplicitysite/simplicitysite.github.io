@@ -493,8 +493,13 @@ pre {
 
 .course-breakout blockquote {
  width: 240px;
- margin:3em auto -1em;
+ margin:3em auto 0em;
 }
+
+.course-breakout blockquote footer {
+ margin-bottom:2em;
+}
+
 
 .course-breakout blockquote span {
  quotes: "\201C""\201D""\2018""\2019";
