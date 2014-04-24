@@ -151,9 +151,3 @@ Day 3 - "Refactoring Patterns"
 * Refactoring Patterns Part 3
 * Compare and contrast solutions at the end of the day.
 
-
-
-Applying for this course
------
-
-{% include contact_form.html %}
