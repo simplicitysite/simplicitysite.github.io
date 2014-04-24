@@ -210,13 +210,12 @@
 	#contact_form ul					{float:left;}
 	#contact_form ul li					{margin:10px 0; list-style:none; position:relative; clear:both;}
 	#contact_form label					{line-height:35px; width:100px; text-align:right; float:left; margin-right:10px;}
-	#contact_form input#name,
-	#contact_form input#email,
-	#contact_form input#subject,
+	#contact_form input.bound,
+	#contact_form select,
 	#contact_form textarea				{float:left; padding:8px; border:1px solid #CCCCCC; margin-left:10px; background:#fcfcfc; -moz-border-radius:5px; border-radius:5px;  -webkit-border-radius:5px;}
-	#contact_form input#name,
-	#contact_form input#email,
-	#contact_form input#subject			{width:400px;}
+	
+	#contact_form select,
+	#contact_form input.bound			{width:400px;}
 	#contact_form textarea				{width:500px;height:150px; resize: none;}
 	#contact_form input.button			{float:right;}
 	
@@ -531,11 +530,11 @@ pre {
 
 }
 
-.course-breakout a {
+.course-breakout a.book {
   border: 1px solid #aaaaaa; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius:5px; background:#f9f9f9;
   display:block;
   width:230px;
-  margin:2em auto;
+  margin:1em auto;
   text-align:center;
   font-weight:bold;
   font-size:2em;
@@ -543,7 +542,23 @@ pre {
   
 }
 
-.course-breakout a:hover {
+.course-breakout p {
+ font-size: 1.2em;
+ width: 230px;
+ margin: 0.2em auto;
+}
+
+.course-breakout hr {
+ width:20%;
+ border:0 none;
+ border-top: 1px solid #d6d6d6;
+}
+
+.course-breakout hr.closer {
+ margin-top: 2em;
+}
+
+.course-breakout a.book:hover {
  -webkit-box-shadow:0px 0px 20px #787878;
  -moz-box-shadow:0px 0px 20px #787878;
  background:#f9f9f9;

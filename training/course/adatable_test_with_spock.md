@@ -3,11 +3,12 @@ layout: course
 permalink: adaptable_testing_with_spock/
 title: Adaptable Testing With SPOCK
 duration: 3 days
+sidebar: |
+ <img src="/static/images/training/action/action5.jpg" style="" />
 ---
 
-# Adaptable Testing With SPOCK
+# Adaptable Testing With Spock
 
-lorem ipsum
 
 * Introduction to Tests, Spock and the Java Platform.
 * TDD and BDD.

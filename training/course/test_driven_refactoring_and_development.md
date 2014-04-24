@@ -4,21 +4,12 @@ permalink: test_driven_refactoring_and_development/
 title: Test Driven Refactoring and Development
 duration: 3 days
 sidebar: |
- <blockquote>
- <span>This is cool</span>
- </blockquote>
- <img src="/static/images/placeholder.png" />
- 
- <blockquote>
- <span>Really, really cool</span>
- </blockquote>
-
-test: woo
+ <img src="/static/images/training/action/action2.jpg" style="" />
+ <img src="/static/images/training/action/shower-thinking6a500.jpg" style="" />
 
 ---
 
-Overview
---------
+# Test Driven Refactoring and Development
 
 This course provides a comprehensive, practical and, where possible, context sensitive approach to learning two of the most critical techniques needed by modern software developers, namely Enabling Emergent Design, Test-Driven Development and Refactoring. Together these techniques help teams build applications quicker and more reliably, regardless of language, platform or framework.
 
@@ -35,11 +26,11 @@ High Level Topic Flow
 ---------------------
 
 * Day 1
-	* [Architecture, Emergent & Up-Front Design, TDD and Clean Code](#day1)
+	* Architecture, Emergent & Up-Front Design, TDD and Clean Code
 * Day 2
-	* [Using Tests and Refactoring to work with Legacy Code](#day2)
+	* Using Tests and Refactoring to work with Legacy Code
 * Day 3
-	* [Refactoring Patterns](#day3)
+	* Refactoring Patterns
 	
 <div class="hr dotted clearfix">&nbsp;</div>
 

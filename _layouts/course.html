@@ -9,7 +9,20 @@
 		
 		<div class="course-breakout" style="">
 		
-		<a href="">Apply For This Course</a>
+		
+		<a class="book" href="/contact/private_booking">Book a Private Course</a>
+		
+		{% if page.public %}
+		
+		<hr />
+		<p>This course is also available as a public course in association with {{ page.external[0] }}.</p>
+		
+		<a class="book" href="/contact/public_booking">Book Next Public Course</a>
+		<p style="text-align:center;">Next course date: <strong>{{ page.external[1] }}</strong></p>
+		
+		<hr class="closer" />
+		
+		{% endif %}
 		
 		
 		{{ page.sidebar }}

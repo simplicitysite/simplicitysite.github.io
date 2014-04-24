@@ -3,14 +3,19 @@ title: Building Adaptable Software
 layout: course
 permalink: building_adaptable_software/
 duration: 3 days
+public: true
+external: 
+ - Skills Matter
+ - 19/05/2014
+ - https://skillsmatter.com/courses/498-antifragility
+ 
+
+sidebar: |
+ <img src="/static/images/training/action/action2.jpg" style="" />
+ <img src="/static/images/training/action/action4.jpg" style="" />
+
 ---
-#Building Adaptable Software
-
-## Audience
-
-Any developer with some experience of, ideally, Java, and wants to build software that adapts as fast as their business does.
-
-## Summary
+#Building Antifragile Software
 
 Ever experienced that moment where your heart sinks at the words "We just want you to make this one, small and trivial change…".
 
@@ -19,6 +24,10 @@ If you build software, change is an inevitable force in your life and your abili
 Given that change and speed of software evolution is so critical, why is it that so much software becomes a millstone around yourself and your team's next, leading to you dreading the next inevitable change that's needed? For over 10 years, focus has been consistently applied to helping us work in a more agile and adaptable fashion, with far less focus on how to create software that thrives in an agile environment.
 
 This hands-on, extremely practical course teaches you the latest techniques you can apply today to your architecture, design and code to build software that doesn't fear change. This course will teach you how to build software that adapts as fast as your business and requirements do.
+
+## Audience
+
+Any developer with some experience of, ideally, Java, and wants to build software that adapts as fast as their business does.
 
 ### In this course you will learn how to
 
