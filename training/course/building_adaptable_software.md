@@ -1,13 +1,16 @@
 ---
-title: Building Adaptable Software
+title: Building Antifragile Software with Microservices
 layout: course
 permalink: building_adaptable_software/
 duration: 3 days
 public: true
 external: 
- - Skills Matter
- - 19/05/2014
- - https://skillsmatter.com/courses/498-antifragility
+ - London, UK
+ - 
+   - 19/05/2014 - 21/05/2014
+   - 13/08/2014 - 15/08/2014
+   - 10/11/2014 - 12/11/2014
+ - test
  
 
 sidebar: |
@@ -15,7 +18,7 @@ sidebar: |
  <img src="/static/images/training/action/action4.jpg" style="" />
 
 ---
-#Building Antifragile Software
+#Building Antifragile Software with Microservices
 
 Ever experienced that moment where your heart sinks at the words "We just want you to make this one, small and trivial change…".
 

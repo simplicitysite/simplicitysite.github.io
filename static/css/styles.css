@@ -453,7 +453,7 @@ pre {
  display:block;
  margin:0 0 20px;
  padding:5px;
- border-bottom:1px solid  #d6d6d6;
+/*  border-bottom:1px solid  #d6d6d6; */
  width:100%;
  position:relative;
  color:#000!important;
@@ -464,11 +464,18 @@ pre {
  display:block;
  width:50%;
  float:left;
- margin-right:10px;
+ margin-right:20px;
 }
 
 .trainingtable a div {
- padding-bottom:5px;
+ padding-top:0.2em;
+}
+
+.trainingtable hr {
+ clear:both;
+ border:0 none;
+ border-bottom: 1px solid #d6d6d6;
+ width:99%;
 }
 
 /* course breakout stuff */
@@ -486,7 +493,9 @@ pre {
 .course-breakout img {
  width:200px;
  display: block;
- margin: 0.5em auto;
+ margin: 2em auto;
+ -webkit-box-shadow:0px 0px 10px #888888;
+ -moz-box-shadow:0px 0px 10px #888888;
  
 }
 

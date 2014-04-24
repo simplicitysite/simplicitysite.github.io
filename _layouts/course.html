@@ -15,10 +15,18 @@
 		{% if page.public %}
 		
 		<hr />
-		<p>This course is also available as a public course in association with {{ page.external[0] }}.</p>
+		<p>This course is also available as a public course in {{ page.external[0] }}.</p>
 		
-		<a class="book" href="/contact/public_booking">Book Next Public Course</a>
-		<p style="text-align:center;">Next course date: <strong>{{ page.external[1] }}</strong></p>
+		<a class="book" href="/contact/public_booking" style="clear:both;">Book Next Public Course</a>
+		<p style="text-align:center;">Future course dates: 
+		
+		{% for date in page.external[1] %}
+		
+		<br /><strong>{{ date }}</strong>
+		
+		{% endfor %}
+		
+		</p>
 		
 		<hr class="closer" />
 		
