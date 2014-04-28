@@ -1,5 +1,5 @@
 ---
-title: SpringSource's Core Spring: Developing with the Spring Framework
+title: Developing with the Spring Framework
 layout: course
 permalink: developing_with_spring_framework/
 duration: 4 days
@@ -22,7 +22,7 @@ sidebar: |
 
 author: Russ Miles
 ---
-#SpringSource's Core Spring: Developing with the Spring Framework
+#Developing with the Spring Framework
 
 With *Russ Miles*
 

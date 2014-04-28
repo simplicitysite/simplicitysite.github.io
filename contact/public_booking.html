@@ -3,6 +3,14 @@ layout: page
 title: Public Booking
 contact_form: 1
 permalink: public_booking/
+courses: 
+ - Building Antifragile Software with Microservices
+ - Pivotal RabbitMQ
+ - Introduction to Building Microservices
+ - Hibernate with Spring
+ - Processing Big Data with Hadoop and Pivotal HD
+ - Enterprise Integration with Spring
+ - Developing with the Spring Framework
 ---
 <div class="grid_8">
 
@@ -16,10 +24,16 @@ permalink: public_booking/
         <ul id="fields">
         	<li class="clearfix"><label for="course">Course</label> 
             <select name="course">
-            	<option></option>
-            	<option value="Building Antifragile Software with Microservices" default="true">Building Antifragile Software with Microservices</option>
-            	<option value="Pivotal RabbitMQ" default="true">Pivotal RabbitMQ</option>
+            
+            <option value="" default="true">Select a course</option>
+            
+            {% for option in page.courses %}
+            <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+            
             </select>
+            
+            
             </li>
                 <div class="clear"></div>
                 </li>
