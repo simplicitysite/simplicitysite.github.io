@@ -18,6 +18,10 @@
 		<p>This course is also available as a public course in {{ page.external[0] }}.</p>
 		
 		<a class="book" href="/contact/public_booking" style="clear:both;">Book Next Public Course</a>
+		
+		{% if page.external[2] %}
+		{{ page.external[2] }}
+		{% endif %}
 		<p style="text-align:center;">Future course dates: 
 		
 		{% for date in page.external[1] %}
