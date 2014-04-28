@@ -1,13 +1,17 @@
 ---
 title: Enterprise Integration with Spring
 layout: course
-permalink: developing_with_spring_framework/
+permalink: enterprise_integration_spring/
 duration: 4 days
 public: true
 external: 
- - London, UK
+ - London, Dublin
  - 
-   -
+   - Monday, 12th of May in London
+   - 4th August 2014 in London
+   - 25th August 2014 in Dublin
+   - 20th October 2014 in Dublin
+   - 3rd November 2014 in London
 
  
 

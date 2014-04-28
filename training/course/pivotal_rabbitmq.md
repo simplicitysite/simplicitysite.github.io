@@ -5,11 +5,9 @@ permalink: pivotal_rabbitmq/
 duration: 3 days
 public: true
 external: 
- - London, UK
+ - London
  - 
-   - 19/05/2014 - 21/05/2014
-   - 13/08/2014 - 15/08/2014
-   - 10/11/2014 - 12/11/2014
+   - Monday, 2nd - Wednesday, 4th June in London
 
  
 
@@ -17,7 +15,7 @@ sidebar: |
  <img src="/static/images/training/action/action2.jpg" style="" />
  <img src="/static/images/training/action/action4.jpg" style="" />
 
- author: David Dawson
+author: David Dawson
 ---
 #Pivotal RabbitMQ
 

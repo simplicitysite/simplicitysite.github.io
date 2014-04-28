@@ -5,17 +5,22 @@ permalink: developing_with_spring_framework/
 duration: 4 days
 public: true
 external: 
- - London, UK
+ - London, Dublin
  - 
-   -
+   - 23rd June 2014 in London
+   - 7th July 2014 in Dublin
+   - 21st July 2014 in London
+   - 18th August 2014 in London
+   - 13th October 2014 in Dublin
+   - 27th October 2014 in London
 
  
 
 sidebar: |
- <img src="/static/images/training/action/action3.jpg" style="" />
+ <img src="/static/images/training/action/action2.jpg" style="" />
  <img src="/static/images/training/action/action4.jpg" style="" />
 
- author: Russ Miles
+author: Russ Miles
 ---
 #SpringSource's Core Spring: Developing with the Spring Framework
 
@@ -25,7 +30,7 @@ Are you interested in learning how to build Spring powered Java applications? Th
 
 Learn how to build Spring-powered Java applications on this four day flagship course. Using technologies like Spring AOP and Security in an intensely productive, hands-on setting. Completion of this training entitles each student to receive a free voucher to schedule an exam at a Pearson VUE Center to become a SpringSource Certified Spring Professional.
 
-## Bring YOur Own Hardware
+## Bring Your Own Hardware
 
 Delegates are requested to bring their own laptop for this course, with Java 6 installed. If you are unable to bring a laptop for the course, please contact the sales team on +44 20 7183 9040, or email the sales team.
 

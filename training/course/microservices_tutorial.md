@@ -1,7 +1,7 @@
 ---
 title: Introduction to Building Microservices 
 layout: course
-permalink: hibernate_with_spring/
+permalink: microservices_tutorial/
 duration: 1 day
 public: true
 external: 

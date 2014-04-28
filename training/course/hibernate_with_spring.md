@@ -1,13 +1,17 @@
 ---
-title: Processing Big Data with Hadoop and Pivotal HD
+title: Hibernate with Spring
 layout: course
 permalink: hibernate_with_spring/
-duration: 4 days
+duration: 3 days
 public: true
 external: 
  - Dublin, Ireland
  - 
-   - Monday, 26th - Wednesday, 28th May
+   - Monday, 26th of May in Dublin
+   - 16th June 2014 in London
+   - 17th September 2014 in London
+   - 6th October 2014 in Dublin
+   - 15th December 2014 in London
 
  
 

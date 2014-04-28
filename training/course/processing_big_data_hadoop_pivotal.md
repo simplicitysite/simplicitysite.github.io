@@ -5,9 +5,11 @@ permalink: processing_big_data_hadoop_pivotal/
 duration: 4 days
 public: true
 external: 
- - London, UK
+ - London
  - 
-   -
+   - Monday, 9th of June in London
+   - 8th September 2014 in London
+   - 8th December 2014 in London
 
  
 
