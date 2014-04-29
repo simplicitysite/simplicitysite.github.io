@@ -5,7 +5,7 @@ permalink: hibernate_with_spring/
 duration: 3 days
 public: true
 external: 
- - Dublin, Ireland
+ - London, Dublin
  - 
    - Monday, 26th of May in Dublin
    - 16th June 2014 in London
