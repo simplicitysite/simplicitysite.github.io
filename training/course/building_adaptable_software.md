@@ -7,7 +7,6 @@ public: true
 external: 
  - London, UK
  - 
-   - 19/05/2014 - 21/05/2014
    - 13/08/2014 - 15/08/2014
    - 10/11/2014 - 12/11/2014
  - "<div style=\"text-align:center; margin-bottom: 1em;\"><p style=\"text-decoration: line-through;\">£1995</p>  <p style=\"font-size:1.3em;\">£1795 + VAT<br/>(Early bird, <strong>10% off</strong>)</p></div>"

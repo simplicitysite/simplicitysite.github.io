@@ -7,7 +7,6 @@ public: true
 external: 
  - London, Dublin
  - 
-   - Monday, 26th of May in Dublin
    - 16th June 2014 in London
    - 17th September 2014 in London
    - 6th October 2014 in Dublin

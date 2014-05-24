@@ -5,7 +5,7 @@ permalink: spring_web_course/
 duration: 4 days
 public: true
 external: 
- - Dublin, Ireland
+ - Dublin, London
  - 
    - Monday, 2nd June in London
    - 25th August 2014 in Dublin
