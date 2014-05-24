@@ -1,5 +1,5 @@
 ---
-title: Separating Fact from Fiction: What do Microservices really look like?
+title: Separating Fact from Fiction - What do Microservices really look like?
 external: true
 linkto: https://skillsmatter.com/meetups/6352-separating-fact-from-fiction-what-do-microservices-really-look-like
 linktotext: Visit Skills Matter for more information

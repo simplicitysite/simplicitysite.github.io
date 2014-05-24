@@ -1,5 +1,5 @@
 ---
-title: Clustering Considered Harmful: Simplifying your System with Microservices
+title: An Introduction to Designing and Building Antifragile Microservices with Java
 external: true
 linkto: https://skillsmatter.com/meetups/6335-an-introduction-to-designing-and-building-antifragile-microservices-with-java
 linktotext: Visit Skills Matter for more information
