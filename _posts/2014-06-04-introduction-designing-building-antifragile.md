@@ -1,5 +1,4 @@
 ---
-layout: linkout
 title: Clustering Considered Harmful: Simplifying your System with Microservices
 external: true
 linkto: https://skillsmatter.com/meetups/6335-an-introduction-to-designing-and-building-antifragile-microservices-with-java

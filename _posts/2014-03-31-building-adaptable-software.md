@@ -1,5 +1,4 @@
 ---
-layout: linkout
 title: Russ Miles at Conspect
 location: Conspect
 external: true

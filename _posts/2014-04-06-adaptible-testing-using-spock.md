@@ -1,5 +1,4 @@
 ---
-layout: linkout
 title: Adaptable Testing using Spock and JBehave
 external: true
 linkto: http://agileadria.com/david-dawson/

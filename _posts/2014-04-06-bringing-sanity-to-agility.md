@@ -1,5 +1,4 @@
 ---
-layout: linkout
 title: Bringing Sanity to Agility - Life Preservation for Agile Software
 external: true
 linkto: http://agileadria.com/russ-miles/

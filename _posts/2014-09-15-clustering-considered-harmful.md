@@ -1,5 +1,4 @@
 ---
-layout: linkout
 title: Clustering Considered Harmful: Simplifying your System with Microservices
 external: true
 linkto: https://skillsmatter.com/meetups/6371-clustering-considered-harmful-simplifying-your-system-with-microservices#
