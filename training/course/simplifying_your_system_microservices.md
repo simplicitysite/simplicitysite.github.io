@@ -1,5 +1,5 @@
 ---
-title: Clustering Considered Harmful: Simplifying your System with Microservices
+title: Clustering Considered Harmful - Simplifying your System with Microservices
 layout: course
 permalink: simplifying_your_system_services
 duration: 4 days

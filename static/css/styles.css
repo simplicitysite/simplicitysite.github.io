@@ -432,8 +432,8 @@ pre {
     width:auto;
     color:#ccc;
     background:#005;
-    width:50%;
-
+    /*width:50%;*/
+	display: inline-block;
 
 }
 
