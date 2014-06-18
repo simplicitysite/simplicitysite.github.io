@@ -7,7 +7,6 @@ public: true
 external: 
  - London
  - 
-   - Monday, 9th of June in London
    - 8th September 2014 in London
    - 8th December 2014 in London
 

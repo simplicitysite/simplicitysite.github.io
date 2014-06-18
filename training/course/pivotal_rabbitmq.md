@@ -3,11 +3,11 @@ title: Pivotal RabbitMQ
 layout: course
 permalink: pivotal_rabbitmq/
 duration: 3 days
-public: true
+public: false
 external: 
  - London
  - 
-   - Monday, 2nd - Wednesday, 4th June in London
+   - TBA
 
  
 
