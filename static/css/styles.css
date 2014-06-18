@@ -589,7 +589,11 @@ pre {
  font-size:1.5em;
  margin-left: -5px;
  text-shadow:none;
- 
+ background-color:#fff;
+ opacity:0.85;
+ padding: 0.4em 0.4em;
+ border-radius:5px;
+ width:auto;
 }
 
 .simple-paas div p {
