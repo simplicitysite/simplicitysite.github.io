@@ -578,16 +578,24 @@ pre {
 
 /* Front-page boxes */
 
-.simple-paas div:after {
- content: " ";
+.simple-paas div,
+.simple-paas div:hover
+{
  background-image:url('/static/images/simplepaasbackground.png');
- position:absolute;
- width:calc(100% + 10px);
- height:100%;
- top:0;
- left:1px;
- -webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
-opacity:0.2;
+}
+
+
+.simple-paas div h3 {
+ font-size:1.5em;
+ margin-left: -5px;
+ text-shadow:none;
+ 
+}
+
+.simple-paas div p {
+
+ background-color:#fff;
+ opacity:0.7;
+ padding: 0.4em 2em;
+ border-radius:5px;
 }
