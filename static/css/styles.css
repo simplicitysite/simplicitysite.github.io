@@ -512,7 +512,8 @@ pre {
 .course-breakout blockquote span {
  quotes: "\201C""\201D""\2018""\2019";
  width: 100%;
- font-size:2em;
+ font-size:1.5em;
+ line-height:1.2em;
 }
 
 .course-breakout blockquote span {
@@ -526,7 +527,9 @@ pre {
   font-size: 5em;
   line-height: 0.1em;
   margin-right: 6px;
-  vertical-align: -0.4em;
+  vertical-align: -0.3em;
+  position:relative;
+  top:0.2em;
 }
 
 .course-breakout blockquote span:after {
